@@ -44,7 +44,7 @@ export const Help: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
             variants={variants}
         >
-            <div className="banner-container-v2" id={"help"} >
+            <div className="banner-container-v2" id={"projects"} >
                 <Typography.Title className="font-bold">
                     Help
                 </Typography.Title>

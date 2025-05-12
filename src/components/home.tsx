@@ -36,7 +36,7 @@ export const Home: React.FC<any> = () => {
             transition={{duration: 0.8, delay: 0.2, type: 'spring'}}
             variants={variants}
         >
-            <div className="banner-container-v2" style={{ paddingTop: '20px'}} id={"home"}>
+            <div className="banner-container-v2" style={{ paddingTop: '20px'}} id={"aboutme"}>
                 <Row>
                     <Col span={13} >
                         <div className="home-div">

@@ -29,37 +29,37 @@ export const HeaderComponent: React.FC = () => {
     const items = [
         {
             key: "1",
-            label: "Home",
-            className: activeSection === "home" ? "active" : "",
-            onClick: () => scrollToSection("home")
+            label: "About Me",
+            className: activeSection === "aboutme" ? "active" : "",
+            onClick: () => scrollToSection("aboutme")
         },
         {
             key: "2",
-            label: "About Us",
-            className: activeSection === "about" ? "active" : "",
-            onClick: () => scrollToSection("about")
+            label: "Experince",
+            className: activeSection === "experience" ? "active" : "",
+            onClick: () => scrollToSection("experience")
         },
         {
             key: "3",
-            label: "Pricing",
-            className: activeSection === "pricing" ? "active" : "",
-            onClick: () => scrollToSection("pricing")
+            label: "Skills",
+            className: activeSection === "skills" ? "active" : "",
+            onClick: () => scrollToSection("skills")
         },
         {
             key: "4",
-            label: "Help",
-            className: activeSection === "help" ? "active" : "",
-            onClick: () => scrollToSection("help")
+            label: "Porjects",
+            className: activeSection === "projects" ? "active" : "",
+            onClick: () => scrollToSection("projects")
         },
         {
             key: "5",
-            label: "Contact Us",
-            className: activeSection === "contact" ? "active" : "",
-            onClick: () => scrollToSection("contact")
+            label: "Certifications",
+            className: activeSection === "certifications" ? "active" : "",
+            onClick: () => scrollToSection("certifications")
         },
         {
             key: "6",
-            label: <span className="login-item"><a href="/app/">Login <ArrowRightOutlined style={{ fontWeight: 'bold'}} /> </a></span>,
+            label: <span className="login-item"><a href="/app/">Blogs<ArrowRightOutlined style={{ fontWeight: 'bold'}} /> </a></span>,
         }
     ];
 
@@ -72,7 +72,7 @@ export const HeaderComponent: React.FC = () => {
     };
 
     useEffect(() => {
-        const sections = ["home", "about", "pricing", "help", "contact"];
+        const sections = ["experience", "aboutme", "skills", "projects", "certifications"];
         const throttledHandleScroll = _.throttle(() => {
             let closestSection = "";
             let minDistance = Infinity;
@@ -108,7 +108,7 @@ export const HeaderComponent: React.FC = () => {
             <Row className="h-full flex items-center">
                 <Col span={10} className="header-image-col flex items-center">
                     <a href="#" className="flex items-center">
-                        <Image src={logo} preview={false} width={150} />
+                        <Image src={logo} preview={false} width={100} />
                     </a>
                 </Col>
                 <Col span={14} className="header-image-col h-[6vh] flex items-center justify-start bg-[#001529]">

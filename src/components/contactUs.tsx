@@ -58,7 +58,7 @@ export const ContactUs:React.FC = () => {
             variants={variants}
         >
             {contextHolder}
-            <div className="banner-container-v2" id={"contact"}>
+            <div className="banner-container-v2" id={"certifications"}>
                 <Typography.Title className="font-bold">Contact US</Typography.Title>
                 <div className={"contact-container"} style={{ paddingTop: 20, paddingBottom: 30}}>
                     <Col xs={24} sm={24} md={24} lg={24} className="form-container">

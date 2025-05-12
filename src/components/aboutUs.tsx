@@ -17,7 +17,7 @@ export const AboutUS: React.FC<any> = () => {
             transition={{duration: 0.8, delay: 0.2, type: 'spring'}}
             variants={variants}
         >
-            <div className="banner-container-v2" id={"about"}>
+            <div className="banner-container-v2" id={"experience"}>
                 <Typography.Title className="font-bold">About US</Typography.Title>
                 <Typography.Title level={2}>What is SBCAdocs?</Typography.Title>
                 <div style={{ width: '100%'}}>

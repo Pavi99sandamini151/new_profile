@@ -20,7 +20,7 @@ export const Pricing: React.FC<any> = () => {
             transition={{duration: 0.8, delay: 0.2, type: 'spring'}}
             variants={variants}
         >
-            <div className="banner-container-v2" id={"pricing"}>
+            <div className="banner-container-v2" id={"skills"}>
                 <Typography.Title className="font-bold">Pricing</Typography.Title>
                 <div className="w-full pt-[10px]">
                     <Typography.Title level={2}>Electronic Jobsite Packages Subscription</Typography.Title>
