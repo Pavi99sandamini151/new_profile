@@ -1,0 +1,13 @@
+.help-video-div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.help-ol {
+    padding: 0px;
+    list-style-position: inside;
+    text-align: left;
+}

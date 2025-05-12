@@ -1,0 +1,39 @@
+.contact-image-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-item {
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+.ant-form-item .ant-form-item-label >label {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.input-filed {
+    border-radius: 8px;
+    border: 1px solid #dcd9d9;
+}
+
+[type='text']:focus {
+    border-color: #ffffff !important;
+}

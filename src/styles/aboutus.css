@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Inter:wght@100;200;400;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.banner-container-v2 {
+    position: relative;
+    margin-top: 84px;
+    padding: 0 400px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1600px) {
+    .banner-container-v2 {
+        padding: 0 200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner-container-v2 {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner-container-v2 {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-container-v2 {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container-v2 {
+        padding: 0 10px;
+    }
+}
