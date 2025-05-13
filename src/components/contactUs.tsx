@@ -1,142 +1,86 @@
-import React from "react";
-import {Button, Col, Form, Input, notification, Row, Space, Typography} from "antd";
-import { motion } from "framer-motion";
-import TextArea from "antd/es/input/TextArea";
-import {contactUsProps, sendContactEmail} from "../api";
+import React from 'react';
+import { FormEvent, useState } from 'react';
+import { IoPaperPlane } from 'react-icons/io5';
 
-export const ContactUs:React.FC = () => {
+export const ContactUs: React.FC = () => {
+    const [formData, setFormData] = useState({
+    fullname: '',
+    email: '',
+    message: ''
+  });
 
-    const variants = {
-        hidden: { opacity: 0, y: 100 },
-        visible: { opacity: 1, y: 0 }
-    };
+  const isFormValid = formData.fullname && formData.email && formData.message;
 
-    const layout = {
-        labelCol: { span: 0 },
-        wrapperCol: { span: 24 },
-    };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    const [form] = Form.useForm();
-
-    const [api, contextHolder] = notification.useNotification();
-    type NotificationType = 'success' | 'error';
-    const openNotificationWithIcon = (type: NotificationType, title: string, message: string) => {
-        api[type]({
-            message: title,
-            description: message,
-        });
-    };
-
-    const onFinish = async (values: contactUsProps) => {
-        const res = await sendContactEmail(values)
-
-            if(res.status == 200) {
-                openNotificationWithIcon('success', 'Success', 'Email sent successfully')
-                onReset()
-            } else{
-                openNotificationWithIcon('error', 'Error', 'Error sending email')
-            }
-    };
-
-    const onReset = () => {
-        form.resetFields();
-    };
-
-    const customizeRequiredMark = (label: React.ReactNode, { required }: { required: boolean }) => (
-        <>
-            {label}
-            {required ? <p style={{color:"red"}}>&nbsp;*</p> : <p></p>}
-        </>
-    );
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    // Submit logic here
+    console.log(formData);
+  };
 
     return (
-        <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.3, once: true }}
-            transition={{duration: 0.8, delay: 0.2, type: 'spring'}}
-            variants={variants}
-        >
-            {contextHolder}
-            <div className="banner-container-v2" id={"certifications"}>
-                <Typography.Title className="font-bold">Contact US</Typography.Title>
-                <div className={"contact-container"} style={{ paddingTop: 20, paddingBottom: 30}}>
-                    <Col xs={24} sm={24} md={24} lg={24} className="form-container">
-                        <Row className="w-full flex items-center">
-                            <Typography.Text className="text-[19px]">
-                                To sign up for the Electronic Jobsite Package, please fill out the form below. For technical inquiries, please fill out the technical support form.{' '}
-                                <a href={'https://www.sbcacomponents.com/sign-up-for-electronic-jobsite-packages'}>Electronic Jobsite Packages form.</a>
-                            </Typography.Text>
-                            <Form
-                                {...layout}
-                                form={form}
-                                name="control-hooks"
-                                onFinish={onFinish}
-                                className="w-full text-[15px] mt-4"
-                                initialValues={{ requiredMarkValue: true }}
-                                requiredMark={customizeRequiredMark}
-                            >
-                                <Row gutter={20}>
+  <div className="contact" data-page="contact">
+      <header>
+        <h2 className="h2 article-title">Contact</h2>
+      </header>
 
-                                    <Col xs={24} sm={12}>
-                                        <Form.Item
-                                            name="firstName"
-                                            rules={[{ required: true, message: "Please Enter First Name" }]}
-                                        >
-                                            <Input className="input-filed" placeholder="Enter Your First Name" />
-                                        </Form.Item>
-                                    </Col>
-                                    <Col xs={24} sm={12}>
-                                        <Form.Item
-                                            name="lastName"
-                                            rules={[{ required: true, message: "Please Enter Last Name" }]}
-                                        >
-                                            <Input className="input-filed" placeholder="Enter Your Last Name" />
-                                        </Form.Item>
-                                    </Col>
-                                </Row>
+      <section className="mapbox" data-mapbox>
+        <figure>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+            width="400"
+            height="300"
+            loading="lazy"
+            style={{ border: 0 }}
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </figure>
+      </section>
 
-                                <Row gutter={16}>
-                                    <Col xs={24} sm={12}>
-                                        <Form.Item
-                                            name="email"
-                                            rules={[
-                                                { type: "email", message: "The input is not valid Email." },
-                                                { required: true, message: "Please Enter Email" },
-                                            ]}
-                                        >
-                                            <Input className="input-filed" placeholder="Enter Your Email" />
-                                        </Form.Item>
-                                    </Col>
-                                    <Col xs={24} sm={12}>
-                                        <Form.Item
-                                            name="description"
-                                            rules={[{ required: true, message: "Please Enter Description" }]}
-                                            style={{ width: '100%'}}
-                                        >
-                                            <TextArea className="input-filed" placeholder="Enter Description" rows={4} showCount maxLength={2000}/>
-                                        </Form.Item>
-                                    </Col>
-                                </Row>
+      <section className="contact-form">
+        <h3 className="h3 form-title">Contact Form</h3>
 
-                                <Row>
-                                    <Col span={24} >
-                                        <Space style={{ display: "flex", justifyContent: "flex-end", width: '100%' }}>
-                                            <Button htmlType="button" onClick={onReset} className="clear-button">
-                                                CLEAR
-                                            </Button>
-                                            <Button type="primary" htmlType="submit" className="send-button">
-                                                CONTACT US
-                                            </Button>
-                                        </Space>
-                                    </Col>
-                                </Row>
+        <form className="form" onSubmit={handleSubmit}>
+          <div className="input-wrapper">
+            <input
+              type="text"
+              name="fullname"
+              className="form-input"
+              placeholder="Full name"
+              value={formData.fullname}
+              onChange={handleChange}
+              required
+            />
 
-                            </Form>
-                        </Row>
-                    </Col>
-                </div>
-            </div>
-        </motion.div>
-    )
-}
+            <input
+              type="email"
+              name="email"
+              className="form-input"
+              placeholder="Email address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <textarea
+            name="message"
+            className="form-input"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+
+          <button className="form-btn" type="submit" disabled={!isFormValid}>
+            <IoPaperPlane style={{ marginRight: '0.5rem' }} />
+            <span>Send Message</span>
+          </button>
+        </form>
+      </section>
+    </div>
+)}
