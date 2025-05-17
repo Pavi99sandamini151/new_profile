@@ -1,17 +1,32 @@
-[
-  {
-    "title": "Creative director",
-    "date": "2015 — Present",
-    "description": "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur."
-  },
-  {
-    "title": "Art director",
-    "date": "2013 — 2015",
-    "description": "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-  },
-  {
-    "title": "Web designer",
-    "date": "2010 — 2013",
-    "description": "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-  }
-]
+{
+  "education": [
+    {
+      "title": "University of Colombo School of Computing",
+      "period": "2019-2023",
+      "description": "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Creative director",
+      "period": "2015 — Present",
+      "description": "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur."
+    },
+    {
+      "title": "Art director",
+      "period": "2013 — 2015",
+      "description": "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+    },
+    {
+      "title": "Web designer",
+      "period": "2010 — 2013",
+      "description": "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+    }
+  ],
+  "skills": [
+    { "name": "Web design", "level": 80 },
+    { "name": "Graphic design", "level": 70 },
+    { "name": "Branding", "level": 90 },
+    { "name": "WordPress", "level": 50 }
+  ]
+}

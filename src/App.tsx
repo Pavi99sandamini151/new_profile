@@ -7,7 +7,7 @@ import './index.css';
 export default function App() {
 
   return (
-    <main className="app-layout" style={{ border: '1px solid green'}}>
+    <main className="app-layout">
       <Sidebar />
       <MainContent />
     </main>

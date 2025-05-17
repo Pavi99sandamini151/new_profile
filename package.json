@@ -14,7 +14,7 @@
     "dist"
   ],
   "dependencies": {
-    "antd": "^5.18.3",
+    "antd": "^5.25.1",
     "axios": "^1.9.0",
     "flowbite": "^3.1.2",
     "framer-motion": "^11.2.4",

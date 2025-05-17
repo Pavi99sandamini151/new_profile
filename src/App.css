@@ -163,7 +163,7 @@ img, ion-icon, a, button, time, span { display: block; }
   margin: 10px auto;
   padding: 0;
   width: 98%;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 100%;
   display: flex;
 }
@@ -1736,6 +1736,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     position: relative;
     width: max-content;
     margin: auto;
+    padding-top: 100px;
   }
 
 

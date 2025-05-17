@@ -1,8 +1,13 @@
-import React from 'react';
+import React from "react";
 
-export const Certifications: React.FC = () => (
-  <section className="section">
-    <h2 style={{ border: '1px solid red', }}>Certifications</h2>
-    <p>This is the resume section content.</p>
-  </section>
-);
+export const Certifications: React.FC<any> = () => {
+
+    return (
+        <div className="resume" data-page="resume">
+      <header>
+        <h2 className="h2 article-title">Certifications</h2>
+      </header>
+
+    </div>
+    )
+};
